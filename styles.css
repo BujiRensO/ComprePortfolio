@@ -6,23 +6,35 @@
     --bg-card: rgba(255, 255, 255, 0.05);
     --text-primary: #ffffff;
     --text-secondary: #a0a0c0;
-    --accent-primary: #6d28d9; /* Deep Purple */
-    --accent-secondary: #06b6d4; /* Cyan/Teal */
+    --accent-primary: #6d28d9;
+    /* Deep Purple */
+    --accent-secondary: #06b6d4;
+    /* Cyan/Teal */
     --gradient-hero: linear-gradient(135deg, rgba(109, 40, 217, 0.8) 0%, rgba(6, 182, 212, 0.5) 100%);
     --glass-border: 1px solid rgba(255, 255, 255, 0.1);
     --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 /* Reset & Scaffolding */
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 body {
     background-color: var(--bg-dark);
     color: var(--text-primary);
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
-    scroll-behavior: smooth;
+    position: relative;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 800;
     letter-spacing: -0.02em;
 }
@@ -37,9 +49,11 @@ a {
 ::-webkit-scrollbar {
     width: 10px;
 }
+
 ::-webkit-scrollbar-track {
     background: var(--bg-dark);
 }
+
 ::-webkit-scrollbar-thumb {
     background: var(--accent-primary);
     border-radius: 5px;
@@ -82,7 +96,8 @@ a {
     position: relative;
 }
 
-.nav-link.active, .nav-link:hover {
+.nav-link.active,
+.nav-link:hover {
     color: var(--accent-secondary) !important;
 }
 
@@ -97,7 +112,8 @@ a {
     transition: width 0.3s;
 }
 
-.nav-link:hover::after, .nav-link.active::after {
+.nav-link:hover::after,
+.nav-link.active::after {
     width: 100%;
 }
 
@@ -109,7 +125,7 @@ a {
     position: relative;
     overflow: hidden;
     /* Fallback if image fails, but we assume it exists */
-    background: radial-gradient(circle at center, #1e1b4b 0%, #0a0e17 70%); 
+    background: radial-gradient(circle at center, #1e1b4b 0%, #0a0e17 70%);
 }
 
 .hero-bg-img {
@@ -146,6 +162,7 @@ a {
     color: white;
     box-shadow: 0 4px 15px rgba(109, 40, 217, 0.4);
 }
+
 .btn-primary-custom:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(109, 40, 217, 0.6);
@@ -178,7 +195,7 @@ section {
 .project-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0, 0, 0, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -192,8 +209,8 @@ section {
 
 /* Skills */
 .skill-badge {
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--text-primary);
     padding: 0.5rem 1rem;
     border-radius: 8px;
@@ -210,12 +227,13 @@ section {
 
 /* Contact */
 .form-control {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     color: white;
 }
+
 .form-control:focus {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     border-color: var(--accent-secondary);
     color: white;
     box-shadow: none;
